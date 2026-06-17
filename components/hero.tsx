@@ -32,7 +32,7 @@ export function Hero() {
             <span className="gradient-tag inline-block rounded-xl px-3 py-0.5 shadow-purple-lg">
               видимості
             </span>{" "}
-            вашого бренду
+            бренду
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
