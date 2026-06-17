@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 font-heading text-4xl font-extrabold leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Масштабні рішення для{" "}
+            Рішення для{" "}
             <span className="gradient-tag inline-block rounded-xl px-3 py-0.5 shadow-purple-lg">
               видимості
             </span>{" "}
