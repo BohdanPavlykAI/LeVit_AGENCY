@@ -4,6 +4,8 @@ import { FlagshipServices } from "@/components/flagship-services"
 import { SecondaryServices } from "@/components/secondary-services"
 import { ProductionTrust } from "@/components/production-trust"
 import { SiteFooter } from "@/components/site-footer"
+import { Partners } from "@/components/partners"
+import { Testimonials } from "@/components/Testimonials"
 
 export default function Page() {
   return (
@@ -13,6 +15,8 @@ export default function Page() {
       <FlagshipServices />
       <SecondaryServices />
       <ProductionTrust />
+        <Partners />
+        <Testimonials />
       <SiteFooter />
     </main>
   )
