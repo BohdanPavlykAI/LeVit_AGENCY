@@ -10,6 +10,8 @@ const navLinks = [
   { label: "Основні напрями", href: "#services" },
   { label: "Додаткові послуги", href: "#secondary" },
   { label: "Про нас", href: "#production" },
+  { label: "Партнери", href: "#partners" },
+  { label: "Відгуки", href: "#testimonials" },
   { label: "Контакти", href: "#footer" },
 ]
 

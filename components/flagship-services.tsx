@@ -7,7 +7,7 @@ const flagship = [
     tag: "Зовнішня реклама",
     title: "Зовнішня реклама",
     description:
-        "Монументальні формати, що домінують у міському просторі. Проєктуємо, виготовляємо та монтуємо рекламні空間 конструкції міського масштабу з інженерною точністю.",
+        "Монументальні формати, що домінують у міському просторі. Проєктуємо, виготовляємо та монтуємо рекламні конструкції міського масштабу з інженерною точністю.",
     image: "/outdoor-light.png",
     imageAlt: "Чистий білборд та світловий короб на сучасному білому фасаді вдень",
     services: [
@@ -42,14 +42,8 @@ export function FlagshipServices() {
       <section id="services" className="relative px-4 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-3 text-xl font-extrabold uppercase tracking-[0.2em] text-primary">
               Основні напрямки
-            </p>
-            <h2 className="font-heading text-balance text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
-              Два напрямки. Один безкомпромісний стандарт.
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Глибока експертиза у кожній деталі — від конструкції до фінального монтажу.
             </p>
           </div>
 

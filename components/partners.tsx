@@ -1,32 +1,55 @@
 "use client"
 
-// Якщо у вас будуть готові SVG-логотипи партнерів, імпортуйте їх сюди.
-// Поки що використаємо текстові заглушки у преміум-стилі.
+import Image from "next/image"
+
 const partners = [
-    { name: "BrandOne", logo: "BRAND ONE" },
-    { name: "AlphaGroup", logo: "ALPHA GROUP" },
-    { name: "LuxuryRetail", logo: "LUXURY RETAIL" },
-    { name: "TechCorp", logo: "TECH.CORP" },
-    { name: "VibeStudio", logo: "VIBE STUDIO" },
+    { name: "Continent", logo: "/continent.jpg" },
+    { name: "Expert", logo: "/expert.jpg" },
+    { name: "Greenville", logo: "/Greenville.jpg" },
+    { name: "Integral Bud", logo: "/integral_bud.jpg" },
+    { name: "Esculab", logo: "/Esculab.png" },
+    { name: "Ekopolis", logo: "/ekopolis.jpg" },
+    { name: "Well Towers", logo: "/WellTowers.svg" },
 ]
 
 export function Partners() {
     return (
-        <section className="border-y border-border bg-soft/50 py-12">
+        <section id = 'partners' className="border-y border-border bg-soft/50 py-16">
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-                    Нам довіряють лідери ринку
+                    Нам довіряють
                 </p>
 
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-x-16 gap-y-8 opacity-60 grayscale transition-all">
-                    {partners.map((partner) => (
-                        <div
-                            key={partner.name}
-                            className="font-heading text-lg font-bold tracking-widest text-muted-foreground transition-colors hover:text-foreground hover:opacity-100 cursor-default select-none"
-                        >
-                            {partner.logo}
-                        </div>
-                    ))}
+                {/* Контейнер із великими відступами (gap-x-24) для масштабних логотипів */}
+                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-24 gap-y-12 opacity-40 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0">
+                    {partners.map((partner) => {
+                        const isImage = partner.logo.startsWith("/")
+
+                        return (
+                            <div
+                                key={partner.name}
+                                className="flex items-center justify-center h-24 transition-all duration-300"
+                            >
+                                {isImage ? (
+                                    /* МАКСИМАЛЬНИЙ КОНТЕЙНЕР ДЛЯ ЗОБРАЖЕННЯ (висота 96px, ширина 256px) */
+                                    <div className="relative h-24 w-64">
+                                        <Image
+                                            src={partner.logo}
+                                            alt={`Логотип ${partner.name}`}
+                                            fill
+                                            className="object-contain"
+                                            sizes="(max-width: 768px) 200px, 300px"
+                                        />
+                                    </div>
+                                ) : (
+                                    /* ВЕЛИКИЙ ПРЕМІУМ ШРИФТ ДЛЯ ЗАГЛУШОК (text-3xl) */
+                                    <span className="font-heading text-2xl font-black tracking-[0.15em] text-muted-foreground sm:text-3xl select-none cursor-default">
+                    {partner.logo}
+                  </span>
+                                )}
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>

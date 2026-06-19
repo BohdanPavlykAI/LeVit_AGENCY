@@ -1,12 +1,15 @@
 "use client"
 
 import Image from "next/image"
-import { Mail, Phone } from "lucide-react"
+// Імпортуємо іконку Instagram
+import { Mail, Phone, Camera } from "lucide-react"
 
 const footerLinks = [
   { label: "Основні послуги", href: "#services" },
   { label: "Додаткові послуги", href: "#secondary" },
-  { label: "Про Нас", href: "#production" },
+  { label: "Про нас", href: "#production" },
+  { label: "Партнери", href: "#partners" },
+  { label: "Відгуки", href: "#testimonials" },
 ]
 
 export function SiteFooter() {
@@ -44,6 +47,7 @@ export function SiteFooter() {
                 </p>
               </div>
 
+              {/* Блок контактів (телефон, пошта, інстаграм) */}
               <div className="space-y-4">
                 <a
                     href="tel:+380965106295"
@@ -63,10 +67,23 @@ export function SiteFooter() {
                 </span>
                   mukoltsiv.lesia@gmail.com
                 </a>
+
+                {/* НОВЕ ПОСИЛАННЯ НА INSTAGRAM */}
+                <a
+                    href="https://www.instagram.com/levit_agency?igsh=aThtMHU0aTdyMzFk"
+                    target="_blank" // Відкривати в новій вкладці
+                    rel="noopener noreferrer" // Безпека для зовнішніх посилань
+                    className="flex items-center gap-3 text-sm font-semibold text-white transition-colors hover:text-purple-200"
+                >
+                <span className="grid size-9 place-items-center rounded-xl bg-white/15">
+                  <Camera className="size-4" />
+                </span>
+                  @levit_agency
+                </a>
               </div>
             </div>
 
-            {/* Один єдиний блок навігації з трьома посиланнями + Плавний Скрол */}
+            {/* Блок навігації */}
             <div className="flex flex-col justify-center p-8 sm:p-10 lg:col-span-3 lg:pl-16">
               <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-foreground">
                 Навігація

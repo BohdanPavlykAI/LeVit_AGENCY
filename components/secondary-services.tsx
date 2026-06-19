@@ -29,17 +29,10 @@ export function SecondaryServices() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              <p className="mb-3 text-xl font-extrabold uppercase tracking-[0.2em] text-primary">
                 Додаткові послуги
               </p>
-              <h2 className="font-heading text-balance text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-                Усе інше — також на власних потужностях
-              </h2>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Допоміжні виробничі послуги, що доповнюють будь-яку кампанію без втрати
-              швидкості та якості фінішу.
-            </p>
           </div>
 
           {/* СІТКА: Змінено на lg:grid-cols-4 для рівного відображення 4 карток у ряд */}
