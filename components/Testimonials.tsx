@@ -36,13 +36,13 @@ export function Testimonials() {
         <section id="testimonials" className="relative px-4 py-24 lg:px-8 bg-background overflow-hidden">
             <div className="mx-auto max-w-7xl">
 
-                {/* ШАПКА: Повністю виправлено вирівнювання заголовка строго по центру */}
+                {/* ШАПКА: Вирівнювання заголовка строго по центру */}
                 <div className="mb-16 relative flex flex-col items-center justify-center">
                     <h2 className="font-heading text-center text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
                         Відгуки
                     </h2>
 
-                    {/* Кнопки слайдера — позиціонуються абсолютно праворуч, щоб не зсувати заголовок */}
+                    {/* Кнопки слайдера — якщо відгуків більше 3 */}
                     {isSlider && (
                         <div className="flex gap-2 mt-4 sm:mt-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2">
                             <button
@@ -63,11 +63,15 @@ export function Testimonials() {
                     )}
                 </div>
 
-                {/* Контейнер відгуків з автоматичним центруванням */}
+                {/* Контейнер відгуків з адаптивною поведінкою для телефонів */}
                 <div className="relative w-full">
                     <div
-                        className={`flex gap-6 transition-transform duration-500 ease-out ${
-                            isSlider ? "justify-start" : "justify-center"
+                        className={`flex gap-6 pb-6 pt-2 transition-transform duration-500 ease-out 
+                            /* НА ТЕЛЕФОНІ: вмикаємо нативний горизонтальний скролл пальцем */
+                            overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 px-4
+                            /* НА ВЕЛИКИХ ЕКРАНАХ: повертаємо стандартне відображення в ряд/сітку */
+                            sm:mx-0 sm:px-0 sm:overflow-x-visible ${
+                            isSlider ? "sm:justify-start" : "sm:justify-center"
                         }`}
                         style={
                             isSlider
@@ -78,7 +82,11 @@ export function Testimonials() {
                         {reviews.map((review, idx) => (
                             <div
                                 key={idx}
-                                className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-purple shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
+                                className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-purple
+                                           /* Фікс стиснення картки на телефоні */
+                                           shrink-0 snap-center
+                                           /* Адаптивна ширина: на телефоні картка займає 85% екрана, на планшетах/ПК ділить простір */
+                                           w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
                             >
                                 <div>
                                     {/* Зірочки рейтингу */}

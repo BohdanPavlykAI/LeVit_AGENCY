@@ -9,43 +9,46 @@ const partners = [
     { name: "Integral Bud", logo: "/integral_bud.jpg" },
     { name: "Esculab", logo: "/Esculab.png" },
     { name: "Ekopolis", logo: "/ekopolis.jpg" },
-    { name: "Well Towers", logo: "/WellTowers.svg" },
+    { name: "Well Towers", logo: "/Welltowers.svg" },
 ]
 
 export function Partners() {
     return (
-        <section id = 'partners' className="border-y border-border bg-soft/50 py-16">
+        <section id='partners' className="border-y border-border bg-soft/50 py-16">
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
                     Нам довіряють
                 </p>
 
-                {/* Контейнер із великими відступами (gap-x-24) для масштабних логотипів */}
-                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-24 gap-y-12 opacity-40 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0">
+                {/* Прибрали загальне залізобетонне приглушення з батьківського контейнера */}
+                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-16 sm:gap-x-24 gap-y-10 sm:gap-y-12">
                     {partners.map((partner) => {
                         const isImage = partner.logo.startsWith("/")
 
                         return (
                             <div
                                 key={partner.name}
-                                className="flex items-center justify-center h-24 transition-all duration-300"
+                                className="flex items-center justify-center h-20 sm:h-24 transition-all duration-300
+                                           /* НА ТЕЛЕФОНІ: Повна яскравість та оригінальний колір */
+                                           opacity-100 grayscale-0
+                                           /* НА ДЕСКТОПІ: Стильне приглушення, що оживає при наведенні на конкретний логотип */
+                                           md:opacity-40 md:grayscale md:hover:opacity-100 md:hover:grayscale-0"
                             >
                                 {isImage ? (
-                                    /* МАКСИМАЛЬНИЙ КОНТЕЙНЕР ДЛЯ ЗОБРАЖЕННЯ (висота 96px, ширина 256px) */
-                                    <div className="relative h-24 w-64">
+                                    /* Адаптивні розміри контейнера для мобільних (щоб великі логотипи не вилізали за екран) */
+                                    <div className="relative h-16 w-44 sm:h-24 sm:w-64">
                                         <Image
                                             src={partner.logo}
                                             alt={`Логотип ${partner.name}`}
                                             fill
                                             className="object-contain"
-                                            sizes="(max-width: 768px) 200px, 300px"
+                                            sizes="(max-width: 768px) 176px, 256px"
                                         />
                                     </div>
                                 ) : (
-                                    /* ВЕЛИКИЙ ПРЕМІУМ ШРИФТ ДЛЯ ЗАГЛУШОК (text-3xl) */
-                                    <span className="font-heading text-2xl font-black tracking-[0.15em] text-muted-foreground sm:text-3xl select-none cursor-default">
-                    {partner.logo}
-                  </span>
+                                    <span className="font-heading text-xl font-black tracking-[0.15em] text-muted-foreground sm:text-3xl select-none cursor-default">
+                                        {partner.logo}
+                                    </span>
                                 )}
                             </div>
                         )
