@@ -108,7 +108,7 @@ export function Testimonials() {
                                         {review.name}
                                     </p>
                                     <p className="text-xs text-muted-foreground mt-0.5">
-                                        {review.role || "Клієнт"}
+                                        {"Клієнт"}
                                     </p>
                                 </div>
                             </div>

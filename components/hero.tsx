@@ -13,10 +13,9 @@ const scrollingParams = [
 ]
 
 const projectSteps = [
-  "Проєктування та розрахунок вітрових навантажень",
-  "Зварювальні роботи та збирання каркаса",
-  "Друк банера високої роздільної здатності",
-  "Електромонтаж та підключення LED-модулів",
+  "Підбір локації",
+  "Поклейка",
+  "Друк банера високої роздільної здатності"
 ]
 
 export function Hero() {
@@ -29,10 +28,6 @@ export function Hero() {
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 lg:grid-cols-12 lg:px-8">
           {/* Left column */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-primary shadow-purple">
-              <Sparkles className="size-4" />
-              Повний цикл рекламного виробництва
-            </div>
 
             <h1 className="mt-6 font-heading text-4xl font-extrabold leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Рішення для{" "}
@@ -43,9 +38,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              Ми проєктуємо та виробляємо зовнішню рекламу й преміальну сувенірну продукцію
-              на власних потужностях. Інженерна точність, контроль якості та швидке
-              розгортання на будь-якому масштабі.
+              Організовуємо та запускаємо проєкти із зовнішньої реклами й преміальної сувенірної продукції. Беремо ваші завдання, контролюємо якість виконання та швидко реалізуємо замовлення на будь-якому масштабі.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -80,24 +73,20 @@ export function Hero() {
                 </span>
                   <div>
                     <p className="font-heading text-sm font-bold text-foreground">Контроль виробництва</p>
-                    <p className="text-xs text-muted-foreground">Проєкт: Мегабокс #014 — Монтаж</p>
+                    <p className="text-xs text-muted-foreground">Проєкт: Мегабокс #014</p>
                   </div>
                 </div>
 
                 <div className="space-y-2.5">
                   <div className="flex items-center justify-between rounded-xl border border-border bg-soft/40 px-4 py-2.5">
-                    <span className="text-xs text-muted-foreground">Формат adolescent</span>
-                    <span className="text-xs font-bold text-foreground">Масштаб 12×4 м</span>
+                    <span className="text-xs text-muted-foreground">Формат</span>
+                    <span className="text-xs font-bold text-foreground">Масштаб 3×6 м</span>
                   </div>
                   <div className="flex items-center justify-between rounded-xl border border-border bg-soft/40 px-4 py-2.5">
                     <span className="text-xs text-muted-foreground">Енергоефективна LED</span>
                     <span className="text-xs font-bold text-primary flex items-center gap-1">
                     <CheckCircle2 className="size-3.5" /> 100% Яскравість
                   </span>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl border border-border bg-soft/40 px-4 py-2.5">
-                    <span className="text-xs text-muted-foreground">Гарантійне покриття</span>
-                    <span className="text-xs font-bold text-foreground">24 місяці</span>
                   </div>
                 </div>
 

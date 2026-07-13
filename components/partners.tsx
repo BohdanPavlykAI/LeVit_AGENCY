@@ -10,6 +10,7 @@ const partners = [
     { name: "Esculab", logo: "/Esculab.png" },
     { name: "Ekopolis", logo: "/ekopolis.jpg" },
     { name: "Well Towers", logo: "/Welltowers.svg" },
+    { name: "Kredo", logo: "/KREDO.PNG" },
 ]
 
 export function Partners() {

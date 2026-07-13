@@ -43,7 +43,7 @@ export function SiteFooter() {
                   />
                 </a>
                 <p className="text-sm leading-relaxed text-purple-100 max-w-xs">
-                  Рекламна агенція повного циклу. Власне виробництво зовнішньої реклами та сувенірної продукції.
+                  Рекламне агенство
                 </p>
               </div>
 
