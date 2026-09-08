@@ -14,7 +14,7 @@ const scrollingParams = [
 
 const projectSteps = [
   "Підбір локації",
-  "Друк банера високої роздільної здатності",
+  "Друк банера",
   "Поклейка"
 ]
 
@@ -81,12 +81,6 @@ export function Hero() {
                   <div className="flex items-center justify-between rounded-xl border border-border bg-soft/40 px-4 py-2.5">
                     <span className="text-xs text-muted-foreground">Формат</span>
                     <span className="text-xs font-bold text-foreground">Масштаб 3×6 м</span>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl border border-border bg-soft/40 px-4 py-2.5">
-                    <span className="text-xs text-muted-foreground">LED</span>
-                    <span className="text-xs font-bold text-primary flex items-center gap-1">
-                    <CheckCircle2 className="size-3.5" /> 100% Яскравість
-                  </span>
                   </div>
                 </div>
 
