@@ -59,13 +59,13 @@ export function SiteFooter() {
                   +380 96 510 62 95
                 </a>
                 <a
-                    href="mailto:mukoltsiv.lesia@gmail.com"
+                    href="mailto:levit.agency@gmail.com"
                     className="flex items-center gap-3 text-sm font-semibold text-white transition-colors hover:text-purple-200"
                 >
                 <span className="grid size-9 place-items-center rounded-xl bg-white/15">
                   <Mail className="size-4" />
                 </span>
-                  mukoltsiv.lesia@gmail.com
+                  levit.agency@gmail.com
                 </a>
 
                 {/* НОВЕ ПОСИЛАННЯ НА INSTAGRAM */}

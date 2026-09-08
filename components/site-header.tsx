@@ -155,13 +155,13 @@ export function SiteHeader() {
                   </a>
 
                   <a
-                      href="mailto:mukoltsiv.lesia@gmail.com"
+                      href="mailto:levit.agency@gmail.com"
                       className="flex items-center gap-3 rounded-xl bg-soft border border-border/40 px-4 py-3 text-sm font-bold text-foreground transition-colors active:text-[#8b2ca0] break-all"
                   >
                 <span className="grid size-8 place-items-center rounded-lg bg-[#8b2ca0]/10 text-[#8b2ca0]">
                   <Mail className="size-4" />
                 </span>
-                    mukoltsiv.lesia@gmail.com
+                    levit.agency@gmail.com
                   </a>
 
                   <a
